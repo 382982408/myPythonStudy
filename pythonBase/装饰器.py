@@ -3,8 +3,8 @@ import logging as LOG
 def use_logging(func):
     def wrapper(*args, **kwargs):
         LOG.warn("%s is running" % func.__name__)
-
-        return func(*args, **kwargs)
+        func()
+        # return func(*args, **kwargs)
 
     return wrapper
 

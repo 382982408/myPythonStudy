@@ -15,6 +15,15 @@ class C:
 
     x = property(getx, setx, delx, "I am the 'x' property")
 
+class D:
+    def __init__(self):
+        pass
+
+d = D()
+d.x = 2
+
+
+
 c = C()
 c.setx(5)
 print(c.getx())
