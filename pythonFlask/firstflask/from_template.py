@@ -33,12 +33,21 @@ def hello_user():
     return render_template("index4.html", user = user1)
 
 #第五种，条件判断
-@app.route('/five<id>')
+@app.route('/five/<id>')
 def user_query(id):
     user = None
     if int(id) == 1:
         user = User(1, "NO1")
     return render_template('index5.html', user = user)
+
+#第六种，循环遍历
+@app.route('/six')
+def users():
+    user_list = []
+    for i in range(11):
+        user = User(i, "No" + str(i))
+        user_list.append(user)
+    return render_template('index6.html', user_list=user_list)
 
 if __name__ == '__main__':
     app.run(debug=True)
