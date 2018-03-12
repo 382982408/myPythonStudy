@@ -32,7 +32,7 @@ def index1():
     }
     return render_template("index01.html", **context)   #注意**的用法
 
-#注意，在HTML中访问字典的value可以用.去访问，例如index01.html中的websites.google
+#注意，在HTML中访问对象或者字典的属性或value可以用.去访问，例如index01.html中的{{ another['name'] }}、{{ websites['baidu'] }}
 
 if __name__ == '__main__':
     app.run(debug=True)

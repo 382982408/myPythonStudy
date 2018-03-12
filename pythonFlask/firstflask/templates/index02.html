@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for key,value in user.items() %}
+    <p>{{ key }}：{{ value }}</p>
+{% endfor %}
+<hr>
+{% for website in websites %}
+    <p>{{ website }}</p>
+{% endfor %}
+</body>
+</html>
