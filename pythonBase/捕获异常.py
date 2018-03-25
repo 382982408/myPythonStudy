@@ -28,6 +28,15 @@ def error2():
     assert a
     assert b
 
-
+def err():
+    a = 1
+    print('1111111111111')
+    a += 1
+    print('222222222222222222')
+    a += 1
+    print('33333333333333333333')
+    a += 1
+    print('4444444444444444444')
+    a += 1
 if __name__ == '__main__':
-    error2()
+    err()
