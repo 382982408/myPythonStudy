@@ -18,6 +18,8 @@ class Person:
     def other(self):
         print("other")
 
+
+
 # p = Person("King")
 # p.sayName()
 # p.sayHi()
