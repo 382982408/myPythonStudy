@@ -21,8 +21,24 @@ class A(object):
     def _halfprivate(self):
         print('This is one underscore leading method')
 
+class B(A):
+    pass
+
 if __name__ == '__main__':
-    a = A()
-    a.public()
-    a._halfprivate()
-    a.__fullprivate()
+    try:
+        a = A()
+        a.public()
+        a._halfprivate()
+        a.__fullprivate()
+    except Exception as e:
+        print(e)
+
+    print("#" * 50)
+
+    try:
+        b = B()
+        b.public()
+        b._halfprivate()
+        b.__fullprivate()
+    except Exception as ee:
+        print(ee)
